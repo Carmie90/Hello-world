@@ -1,0 +1,48 @@
+# Program OwnershipCost
+'''
+This program is to calculate the actual total cost of 
+owning a car. Inluding things such as gas through the years and its total 
+value at selling point
+'''
+
+#Shippingcost.py
+
+def main():
+
+	#Input cost of the car
+	cost= eval(input("Eneter the cost of care"))
+
+	#years= eval(input("Enter the amount of years car was used"))
+	
+	#Input miles driven each year
+	milesYearly= eval(input("Enter the estimate of miles driven per year"))
+
+	# input the price of the gas per gallon
+	gasPrince= eval(input("Enter the price of gas per gallon"))
+
+	#Input the fuel efficiency in mpg
+	gasmpg= eval(input("Enter the fuel efficiency in mpg"))
+
+	#Input the resell value after 5 years
+	resellvalue = eval(input("How much can you sell the car for after 5 years"))
+
+	#The ownership cost will be difference of cost of car - resell value after 5 years
+	ownerShipCost = cost - resellvalue 
+
+	#Calculate the total gallons of gas used per year
+	gasUsed = milesYearly/gasmpg
+
+	#Calculate the total gas cost for 5 years
+	gasCost = gasUsed*gasPrince*5 #years
+
+	#Add the gas cost to ownership cost
+	totalOwnerShipCost= ownerShipCost+ gasCost 
+
+	
+	#Print the total ownership cost to two decimal points
+	print("\nThe total cost of ownership is %.2f" %(totalOwnerShipCost))
+
+
+
+#Call main
+main()
